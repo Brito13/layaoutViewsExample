@@ -10,9 +10,10 @@ namespace layaoutViewsExample.Controllers
             return View();
         }
 
-        [Route("Search/Products")]
-        public IActionResult Search()
+        [Route("Search/Products/{ProductId?}")]
+        public IActionResult Search(int? ProductId)
         {
+            ViewBag.ProductId = ProductId;
             return View();
         }
 
